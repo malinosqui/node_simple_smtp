@@ -10,10 +10,10 @@ var templateDir = path.join(__dirname, 'templates');
 var transporter = nodemailer.createTransport(smtpTransport({
     host: 'smtp.zoho.com',
     secureConnection: true,
-    port: 465,
+    port: 111,
     auth: {
-        user: 'alertas@ensinaae.com.br',
-        pass: 'dev@ensinaae'
+        user: 'teste@teste.com.br',
+        pass: 'teste@teste'
     }
 }));
 
@@ -29,7 +29,7 @@ function send(options, callback) {
 
     template.render(options, function (err, result) {
         var send = transporter.templateSender({
-            from: 'alertas@ensinaae.com.br',
+            from: 'teste@teste.com.br',
             html: result.html
         }, callback);
 
