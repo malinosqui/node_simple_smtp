@@ -34,7 +34,7 @@ function send(options, callback) {
         }, callback);
 
         send({
-            to: options.email,
+            to: 'gabrielmalinosqui@gmail.com, felgimenes@gmail.com, wellington.c.v.santana@gmail.com',
             subject: 'Interesse de aula'
         }, options, callback);
     });
