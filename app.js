@@ -30,7 +30,8 @@ app.post('/sendSimple', function (req, resp) {
     options.location = req.body.location || "";
     options.level = req.body.level || "";
     options.course = req.body.course || "";
-    options.subject = 'Interesse em aula' || "";
+    options.subject = 'Interesse em aula';
+    options.frequency = req.body.frequency || "";
 
 
     smtpClient.send(options, function (err) {
