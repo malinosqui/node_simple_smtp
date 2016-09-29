@@ -8,12 +8,12 @@ var templateDir = path.join(__dirname, 'templates');
 
 // create reusable transporter object using the default SMTP transport
 var transporter = nodemailer.createTransport(smtpTransport({
-    host: 'smtp.zoho.com',
+    host: 'teste.zoho.com',
     secureConnection: true,
     port: 465,
     auth: {
-        user: 'alertas@ensinaae.com.br',
-        pass: 'dev@ensinaae'
+        user: 'teste@teste.com.br',
+        pass: 'teste'
     }
 }));
 
@@ -34,7 +34,7 @@ function send(options, callback) {
         }, callback);
 
         send({
-            to: 'gabrielmalinosqui@gmail.com, felgimenes@gmail.com, wellington.c.v.santana@gmail.com',
+            to: 'teste@gmail.com, teste2@gmail.com, teste3@gmail.com',
             subject: 'Interesse de aula'
         }, options, callback);
     });
